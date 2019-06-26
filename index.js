@@ -4,6 +4,9 @@ const express = require('express')
 const path = require('path')
 const app = express()
 
+
+require('dotenv').config()
+
 // API
 
 app.get('/api/properties', require('./controllers/properties_get'))
@@ -15,12 +18,15 @@ app.get('/api/properties', require('./controllers/properties_get'))
 app.use(express.static(path.join(__dirname, 'client')))
 
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, '/client/products.html'))
+	res.sendFile(path.join(__dirname, '/client/properties.html'))
 	console.log('__dirname', __dirname)
 })
 
+require('dotenv').config()
+
+
 // Run Server
 
-app.listen(3000, () => {
-	console.log('Server listening on port 3000');
+app.listen(process.env.PORT, () => {
+	console.log(`Server listening on port ${process.env.PORT}`);
 })

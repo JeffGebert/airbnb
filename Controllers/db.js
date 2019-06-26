@@ -3,12 +3,12 @@ const {Client} = require('pg')
 
 // create connection
 const db = new Client({
-	connectionString: 'postgres://tortuga:@localhost:5432/myshop'
+	connectionString:process.env.DATABASE_URL
 })
 
 // connect to database
 db.connect((err) => {
-	if (err) {
+	if (err) {s
 		console.log('Error connecting to PostgreSQL database')
 	} else {
 		console.log('Connected to PostgreSQL database')
