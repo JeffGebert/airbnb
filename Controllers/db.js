@@ -8,7 +8,7 @@ const db = new Client({
 
 // connect to database
 db.connect((err) => {
-	if (err) {s
+	if (err) {
 		console.log('Error connecting to PostgreSQL database')
 	} else {
 		console.log('Connected to PostgreSQL database')

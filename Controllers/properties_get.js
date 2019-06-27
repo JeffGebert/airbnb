@@ -16,66 +16,52 @@ ON properties.type = type.id `
 		query += `WHERE `
 	}
 
-	console.log(Object.keys(req.query).length)
-	console.log(Object.keys(req.query)[0])
-	console.log(query.rating)
+	console.log(req.query)
 
-	if (req.query.rating) {
-		if (Object.keys(req.query)[0]=='rating'){
+
+	for (i = 0; i < Object.keys(req.query).length; i++) {
+		console.log("jeff2",Object.keys(req.query)[i])
+
+		if (Object.keys(req.query)[i]=='rating' & i==0){
 			query += `properties.rating = ${req.query.rating}`
-		}else{
+		}else if(Object.keys(req.query)[i]=='rating'){
 			query += ` and properties.rating = ${req.query.rating}`
 		}
-	}
-	if (req.query.rooms) {
-		if (Object.keys(req.query)[0]=='rooms'){
+
+
+		if (Object.keys(req.query)[i]=='rooms' && i==0){
 			query += `properties.rooms = ${req.query.rooms}`
-		}else{
+		}else if(Object.keys(req.query)[i]=='rooms'){
 			query += ` and properties.rooms = ${req.query.rooms}`
 		}
-	}
-	if (req.query.city) {
-		if (Object.keys(req.query)[0]=='city'){
-			query += `city.id = '${req.query.city}'`
-		}else{
+		if (Object.keys(req.query)[i]=='city' && i==0){
+			query += `city.id = '${req.query.city}`
+		}else if(Object.keys(req.query)[i]=='city'){
 			query += ` and city.id = '${req.query.city}'`
 		}
-	}
-	if (req.query.country) {
-		if (Object.keys(req.query)[0]=='country'){
+		if (Object.keys(req.query)[i]=='country' && i==0){
 			query += `country.id = ${req.query.country}`
-		}else{
-		 	query += `and country.id = ${req.query.country}`
+		}else if(Object.keys(req.query)[i]=='country'){
+			 query += `and country.id = ${req.query.country}`
 		}
-	}
-
-	if (req.query.price) {
-		if (Object.keys(req.query)[0]=='price'){
+		if (Object.keys(req.query)[i]=='price' && i==0){
 			query += `properties.price = ${req.query.price}`
-		}else{
+		}else if(Object.keys(req.query)[i]=='price'){
 			query += `and properties.price = ${req.query.price}`
 		}
-	}
-
-	if (req.query.plus) {
-		if (Object.keys(req.query)[0]=='plus'){
+		if (Object.keys(req.query)[i]=='plus' && i==0){
 			query += `properties.plus = '${req.query.plus}'`
-		}else{
+		}else if(Object.keys(req.query)[i]=='plus'){
 			query += `and properties.plus = '${req.query.plus}'`
 		}
-	}
-
-	if (req.query.roomtype) {
-		if (Object.keys(req.query)[0]=='type'){
+		if (Object.keys(req.query)[i]=='type' && i==0){
 			query += `type.id = ${req.query.type}`
-		}else{
+		}else if(Object.keys(req.query)[i]=='type'){
 			query += `and type.id = ${req.query.type}`
 		}
 	}
 
-	console.log('query', query)
-
-
+	console.log(query)
 	db.query(query, (err, result) => {
 		if (err) {
 			res.send(err)

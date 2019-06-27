@@ -1,0 +1,14 @@
+html,
+
+#container {
+	display:grid |inline-grid;
+  grid-template-columns: 40px 50px auto 50px 40px;
+  grid-template-rows: 25% 100px auto;
+
+}
+
+#item-a {
+  grid-column: 4/5;
+  grid-row: 2 / 3;
+	background:green;
+}
