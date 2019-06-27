@@ -20,7 +20,6 @@ ON properties.type = type.id `
 
 
 	for (i = 0; i < Object.keys(req.query).length; i++) {
-		console.log("jeff2",Object.keys(req.query)[i])
 
 		if (Object.keys(req.query)[i]=='rating' & i==0){
 			query += `properties.rating = ${req.query.rating}`

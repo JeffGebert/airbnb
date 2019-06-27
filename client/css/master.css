@@ -1,14 +1,31 @@
-html,
-
 #container {
-	display:grid |inline-grid;
-  grid-template-columns: 40px 50px auto 50px 40px;
-  grid-template-rows: 25% 100px auto;
-
+  display: grid;
+  grid-template-columns: 50px auto auto auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "airbnb_logo header header links"
+    "filters filters filters filters"
+    "travel travel travel travel"
+		"city city city city"
+		"plus plus plus plus"
+		"rated rated rated rated"
+		"info info info info";
 }
 
+}
 #item-a {
-  grid-column: 4/5;
-  grid-row: 2 / 3;
+  grid-area:city;
 	background:green;
+}
+
+#oscar{
+	grid-area:filters;
+	background:orange;
+}
+
+#logo{
+	grid-area:airbnb_logo;
+	background-color: #f6f6f6;
+	background-repeat: no-repeat;
+	background-image: :url("https://res.cloudinary.com/dluvhjltn/image/upload/v1561626948/Airbnb/airbnb_qdltvd.png")
 }
