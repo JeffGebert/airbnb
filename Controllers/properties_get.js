@@ -16,7 +16,7 @@ ON properties.type = type.id `
 		query += `WHERE `
 	}
 
-	console.log(req.query)
+	console.log('query',req.query)
 
 
 	for (i = 0; i < Object.keys(req.query).length; i++) {
@@ -41,22 +41,22 @@ ON properties.type = type.id `
 		if (Object.keys(req.query)[i]=='country' && i==0){
 			query += `country.id = ${req.query.country}`
 		}else if(Object.keys(req.query)[i]=='country'){
-			 query += `and country.id = ${req.query.country}`
+			 query += ` and country.id = ${req.query.country}`
 		}
 		if (Object.keys(req.query)[i]=='price' && i==0){
 			query += `properties.price = ${req.query.price}`
 		}else if(Object.keys(req.query)[i]=='price'){
-			query += `and properties.price = ${req.query.price}`
+			query += ` and properties.price = ${req.query.price}`
 		}
 		if (Object.keys(req.query)[i]=='plus' && i==0){
 			query += `properties.plus = '${req.query.plus}'`
 		}else if(Object.keys(req.query)[i]=='plus'){
-			query += `and properties.plus = '${req.query.plus}'`
+			query += ` and properties.plus = '${req.query.plus}'`
 		}
 		if (Object.keys(req.query)[i]=='type' && i==0){
 			query += `type.id = ${req.query.type}`
 		}else if(Object.keys(req.query)[i]=='type'){
-			query += `and type.id = ${req.query.type}`
+			query += ` and type.id = ${req.query.type}`
 		}
 	}
 

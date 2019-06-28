@@ -1,31 +1,71 @@
-#container {
-  display: grid;
-  grid-template-columns: 50px auto auto auto;
-  grid-template-rows: auto;
+#logobar {
+	display:grid;
+  grid-template-columns: 100px auto auto auto;
+  grid-template-rows: 100px auto;
   grid-template-areas:
-    "airbnb_logo header header links"
-    "filters filters filters filters"
-    "travel travel travel travel"
-		"city city city city"
-		"plus plus plus plus"
-		"rated rated rated rated"
-		"info info info info";
+    "airbnb_logo header . links";
 }
 
-}
-#item-a {
-  grid-area:city;
-	background:green;
+#filters {
+	background-color: green;
+	display: grid;
+	grid-template-columns:auto;
+	grid-template-rows:auto;
+	grid-template-areas:
+		"filters";
 }
 
-#oscar{
-	grid-area:filters;
-	background:orange;
+#filters1 {
+	background-color: green;
+}
+
+#search{
+
+	grid-area:header;
+	display:flex;
+	align-content: center;
+	align-self:center;
+
+}
+
+#links{
+	grid-area:links;
+	display:flex;
+	justify-content: flex-end;
+	align-self:center;
+	align-content:flex-end;
+
+}
+.rightlinks{
+	margin-left: 25px;
 }
 
 #logo{
-	grid-area:airbnb_logo;
-	background-color: #f6f6f6;
-	background-repeat: no-repeat;
-	background-image: :url("https://res.cloudinary.com/dluvhjltn/image/upload/v1561626948/Airbnb/airbnb_qdltvd.png")
+	grid-area: airbnb_logo;
+	background-position: center;
+	background-image:url("https://res.cloudinary.com/dluvhjltn/image/upload/v1561626948/Airbnb/airbnb_qdltvd.png");
+	background-size: contain;
+}
+
+#AirBnb{
+	display: grid;
+	background-color: yellow;
+
+}
+#cities{
+	display: grid;
+	background-color: red;
+
+}
+#Plus{
+	display:grid;
+	background-color: orange;
+}
+#homes{
+	display: grid;
+	background-color: green;
+}
+#moreinfo{
+	display:grid;
+	background-color: purple;
 }
