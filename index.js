@@ -10,7 +10,7 @@ require('dotenv').config()
 // API
 
 app.get('/api/properties', require('./controllers/properties_get'))
-
+app.get('/api/plus', require('./controllers/plus'))
 // Static Files
 
 

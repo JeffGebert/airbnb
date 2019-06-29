@@ -7,16 +7,14 @@
 }
 
 #filters {
-	background-color: green;
-	display: grid;
-	grid-template-columns:auto;
-	grid-template-rows:auto;
-	grid-template-areas:
-		"filters";
+	display:flex;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	align-content: flex-start;
 }
 
 #filters1 {
-	background-color: green;
+
 }
 
 #search{
@@ -58,8 +56,19 @@
 
 }
 #Plus{
-	display:grid;
-	background-color: orange;
+	display: grid;
+}
+#Plus2{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 15px;
+	grid-row-gap: 15px;
+}
+#product{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
 }
 #homes{
 	display: grid;
@@ -68,4 +77,45 @@
 #moreinfo{
 	display:grid;
 	background-color: purple;
+}
+
+.product-image{
+	width: 343px;
+	height: 228.66px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	object-fit: cover;
+	border-radius: 2%;
+
+}
+
+._17u98ky {
+    display: table-cell !important;
+    vertical-align: middle !important;
+}
+
+._1i67wnzj {
+		height: 64px;
+		width: 32px;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    letter-spacing: normal !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    color: rgb(72, 72, 72) !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    position: relative !important;
+    text-align: center !important;
+    width: auto !important;
+    background: none !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: rgb(220, 224, 224) !important;
+    border-image: initial !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
 }
