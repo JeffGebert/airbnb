@@ -11,6 +11,7 @@ require('dotenv').config()
 
 app.get('/api/properties', require('./controllers/properties_get'))
 app.get('/api/plus', require('./controllers/plus'))
+app.get('/api/cities', require('./controllers/cities'))
 // Static Files
 
 

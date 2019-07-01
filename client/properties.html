@@ -6,28 +6,39 @@
 		<title>Document</title>
 		<script src="JS/axios.min.js"></script>
 		<script src="/JS/script.js"></script>
+		<script src="https://kit.fontawesome.com/c1c1a402b4.js"></script>
 		<link rel="stylesheet" href="/css/master.css">
 	</head>
 	<body>
 
 		<container id = "logobar">
-			<div id ="logo">
-			</div>
-			<div id="search">
-				 <input type="text" placeholder="Anywhere·Homes">
 
-	 		</div>
-			<div id="links">
-					<a class="rightlinks">Become a host</a>
-					<a class="rightlinks">Help</a>
-					<a class="rightlinks">Sign up</a>
-					<a class="rightlinks">Login</a>
+			<div class="left_side">
+				<div id ="logo"></div>
+				 <input type="text" placeholder="Anywhere·Homes" id="searchbar">
 			</div>
+
+			<div class="rightlinks">
+				<nav>
+					<ul>
+						<li><a href="">Become a host</a></li>
+						<li><a href="">Help</a></li>
+						<li><a href="">Sign up</a></li>
+						<li><a href="">Login</a></li>
+					</ul>
+				</nav>
+			</div>
+
 		</container>
 
 		<container id = "filters">
-				<button aria-haspopup="true" aria-expanded="false" aria-controls="menuItemComponent-date_picker" class="_1i67wnzj"><div class="_17u98ky">Dates</div></button>
-				<button aria-haspopup="true" aria-expanded="false" aria-controls="menuItemComponent-guest_picker" class="_1i67wnzj"><div class="_17u98ky">Guests</div></button>
+				<div class="filters2">
+					<button aria-haspopup="true" aria-expanded="false" aria-controls="menuItemComponent-date_picker" class="_1i67wnzj"><div class="_17u98ky">Price</div></button>
+					<button aria-haspopup="true" aria-expanded="false" aria-controls="menuItemComponent-guest_picker" class="_1i67wnzj"><div class="_17u98ky">Room Type</div></button>
+					<button aria-haspopup="true" aria-expanded="false" aria-controls="menuItemComponent-date_picker" class="_1i67wnzj"><div class="_17u98ky">Country</div></button>
+					<button aria-haspopup="true" aria-expanded="false" aria-controls="menuItemComponent-date_picker" class="_1i67wnzj"><div class="_17u98ky">City</div></button>
+					<button aria-haspopup="true" aria-expanded="false" aria-controls="menuItemComponent-date_picker" class="_1i67wnzj"><div class="_17u98ky">Rooms</div></button>
+				</div>
 		</container>
 
 		<container id="AirBnb">
@@ -35,7 +46,18 @@
 		</container>
 
 		<container id="cities">
-			<text>future city boxes</text>
+				<div class="city">
+					<div class="cityimages" style="background-image: url(https://res.cloudinary.com/dluvhjltn/image/upload/v1561879328/Airbnb/montrealcity_xopu4v.jpg;);">
+					</div>
+					<div>
+					<div class="citylabel">
+						<span class="_1tmwryn">Montreal</span>
+					</div>
+					<div class="countrylabel">
+						<span class="_iq9zv0m">Quebec</span>
+					</div>
+					</div>
+			</div>
 		</container>
 
 		<container id ="Plus">
@@ -46,12 +68,12 @@
 		</container>
 
 		<container id="homes">
-			<text>regular homes</text>
-		</container>
+				<text>regular homes</text>
+			</container>
 
-		<container id="moreinfo">
-			<text>Travelling on AirBnb</text>
-		</container>
+			<container id="moreinfo">
+				<text>Travelling on AirBnb</text>
+			</container>
 
 	</body>
 </html>
